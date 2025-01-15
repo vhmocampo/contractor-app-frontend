@@ -8,14 +8,11 @@ import { ArrowSquareOut as ArrowSquareOutIcon } from "@phosphor-icons/react/dist
 import { CaretDown as CaretDownIcon } from "@phosphor-icons/react/dist/ssr/CaretDown";
 import { CaretRight as CaretRightIcon } from "@phosphor-icons/react/dist/ssr/CaretRight";
 
-import { paths } from "@/paths";
 import { isNavItemActive } from "@/lib/is-nav-item-active";
 import { usePathname } from "@/hooks/use-pathname";
 import { RouterLink } from "@/components/core/link";
-import { Logo } from "@/components/core/logo";
 
 import { icons } from "../nav-icons";
-import { WorkspacesSwitch } from "../workspaces-switch";
 import { navColorStyles } from "./styles";
 
 const logoColors = {
@@ -50,11 +47,8 @@ export function SideNav({ color = "evident", items = [] }) {
 		>
 			<Stack spacing={2} sx={{ p: 2 }}>
 				<div>
-					<Box component={RouterLink} href={paths.home} sx={{ display: "inline-flex" }}>
-						<Logo color={logoColor} height={32} width={122} />
-					</Box>
+					<Typography variant="h5">Contract.io</Typography>
 				</div>
-				<WorkspacesSwitch />
 			</Stack>
 			<Box
 				component="nav"

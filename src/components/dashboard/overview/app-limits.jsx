@@ -30,17 +30,12 @@ export function AppLimits({ usage }) {
 	return (
 		<Card>
 			<CardHeader
-				action={
-					<IconButton>
-						<DotsThreeIcon weight="bold" />
-					</IconButton>
-				}
 				avatar={
 					<Avatar>
 						<CpuIcon fontSize="var(--Icon-fontSize)" />
 					</Avatar>
 				}
-				title="App limits"
+				title="Job Assignment Rate"
 			/>
 			<CardContent>
 				<Box sx={{ display: "flex", justifyContent: "center" }}>
@@ -96,18 +91,16 @@ export function AppLimits({ usage }) {
 					</NoSsr>
 				</Box>
 				<Stack spacing={2} sx={{ mt: "-80px", textAlign: "center" }}>
-					<Typography variant="h6">You&apos;ve almost reached your limit</Typography>
+					<Typography variant="h6">Jobs assigned to contracts</Typography>
 					<Typography color="text.secondary" variant="body2">
-						You have used{" "}
-						{new Intl.NumberFormat("en-US", { style: "percent", maximumFractionDigits: 2 }).format(usage / 100)} of your
-						available spots. Upgrade plan to create more projects.
+						This is how many of the received jobs for this month have been assigned to contracts.
 					</Typography>
 				</Stack>
 			</CardContent>
 			<Divider />
 			<CardActions sx={{ justifyContent: "flex-end" }}>
 				<Button color="secondary" startIcon={<LightningIcon />} variant="contained">
-					Upgrade plan
+					AI Auto-Assign
 				</Button>
 			</CardActions>
 		</Card>

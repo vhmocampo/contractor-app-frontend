@@ -64,10 +64,10 @@ export const paths = {
 			thread: (threadType, threadId) => `/dashboard/chat/${threadType}/${threadId}`,
 		},
 		crypto: "/dashboard/crypto",
-		customers: {
-			list: "/dashboard/customers",
-			create: "/dashboard/customers/create",
-			details: (customerId) => `/dashboard/customers/${customerId}`,
+		contractors: {
+			list: "/dashboard/contractors",
+			create: "/dashboard/contractors/create",
+			details: (contractorId) => `/dashboard/contractors/${contractorId}`,
 		},
 		eCommerce: "/dashboard/e-commerce",
 		fileStorage: "/dashboard/file-storage",
